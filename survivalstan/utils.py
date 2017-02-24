@@ -404,9 +404,16 @@ def prep_pp_survival_data(models=None, time_element='y_hat_time', event_element=
             
         **Parameters**:
             
-            :param models: list of `fit_stan_survival_model` results from which to extract posterior-predicted values
+            :param models: list of `fit_stan_survival_model` results from which
+            to extract posterior-predicted values. If `None` provided, then
+            `pp_data` must be given.
             :type models: list
             
+            :param pp_data: (optional) data frame containing
+            posterior-predicted values. If None, then `models` must be
+            provided.
+            :type pp_data: pandas.DataFrame
+
             :param by: additional column or columns by which to summarize posterior-predicted values.
                 Default is None, which results in draws summarized by [`iter` and `model_cohort`].
                 Values can include any covariates provided in the original df.
