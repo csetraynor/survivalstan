@@ -13,6 +13,8 @@
 
 author: Carlos Traynor
 Heavily inspired and acknowledged to Tomi Peltola and Jackie Buros
+Also the scale_global parameter must be tuned from the imput data file following the premises described in this article by Piironen and Vehtari
+https://arxiv.org/pdf/1610.05559.pdf
 */
 functions {
   vector sqrt_vec(vector x) {
